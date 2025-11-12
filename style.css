@@ -7,6 +7,8 @@
   --corGradienteSecundaria: #EFEFFF;
   --corTitulo: #1F1F1F;
   --corParagrafo: #474747;
+  --corEntrada: #47474710;
+  --corEntradaTexto: #66666685;
 }
 
 * {
@@ -52,6 +54,9 @@ main {
     margin: 0 auto;
     background-color: var(--corBranca);
     padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
 
     .titulo {
 
@@ -67,6 +72,40 @@ main {
         font-size: .875rem;
         letter-spacing: .0156rem;
         text-align: center;
+      }
+    }
+
+    .entrada {
+
+      div {
+
+        label {
+          font-size: .75rem;
+          font-weight: 700;
+          letter-spacing: .0469rem;
+          line-height: 1.5rem;
+        }
+
+        input {
+          width: 100%;
+          background-color: var(--corEntrada);
+          border: none;
+          border-radius: .5rem;
+          line-height: 1.75rem;
+          letter-spacing: .0469rem;
+          padding: 1rem .75rem;
+          font-size: 1rem;
+          
+          &::placeholder {
+            color: var(--corEntradaTexto);
+          }
+
+          &:focus {
+            outline-color: var(--corDestaque);
+          }
+        }
+
+        
       }
     }
   }
